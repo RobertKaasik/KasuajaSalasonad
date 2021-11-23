@@ -37,4 +37,4 @@ while True:
         print("Väljä")
         break
     else:
-        print("On vaja valida 1,2 või 3")
+        print("On vaja valida 1,2 või 3")#11
