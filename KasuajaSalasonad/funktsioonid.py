@@ -16,7 +16,7 @@ def passautomat()->str:
 	psword = "".join([random.choice(ls) for x in range(12)])
 	return psword
 
-def paskontroll(pasword: str)->bool:
+def paskontroll(passwords: str)->bool:
 	ls=list(psword)
 	for e in ls:
 		if e.isdigit(): d=True
@@ -29,3 +29,9 @@ def paskontroll(pasword: str)->bool:
 	else:
 		t=False
 	return t
+def koik_kasutajad(users,passwords):
+	i=0
+	for user in users:
+		print(user,end="-")
+		print(passwords[i])
+		i+=1

@@ -1,6 +1,6 @@
 from funktsioonid import *
 users=["Robert"]
-paswords=["12345"]
+passwords=["12345"]
 
 while True:
     print("Registreerimine-1,-\nAvtoriseerimine-2,\nVäljä-3")
@@ -16,11 +16,11 @@ while True:
                 print("See nimi juba on olemas listis")
         v=input("Arvuti-A voi ise-I loob parool")
         if v.upper()=="A":
-            pas=paassssautomaat()
+            pas=passautomat()
         elif v.upper()=="I":
             while 1:
                 pas=input("Sisesta oma parool")
-                tulemus=paskontroll(pas)
+                tulemus=paskontroll(passwords)
                 if tulemus==True:
                     users.append(log)
                     passwords.append(pas)
@@ -30,6 +30,8 @@ while True:
     elif v==2:
         print("Avtoriseerimine")
         log=input("Kasutajatunnus:")
+        if passwords.index(pas)==users.index(user):
+            print("Tere tulemast")
 
     elif v==3:
         print("Väljä")
